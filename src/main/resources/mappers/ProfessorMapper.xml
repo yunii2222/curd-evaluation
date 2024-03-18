@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ohgiraffers.crudevaluation.professor.model.dao.ProfessorMapper">
+    <select id="findAllProfessor" resultType="com.ohgiraffers.crudevaluation.professor.model.dto.ProfessorDTO">
+        SELECT
+            professor_code,
+            professor_name,
+            professor_phone,
+            subject_code
+        FROM
+            tb_professor
+        ORDER BY
+            professor_code
+    </select>
+    <select id="findProfessorList" resultType="com.ohgiraffers.crudevaluation.professor.model.dto.SubjectDTO">
+        SELECT
+            subject_code,
+            subject_name,
+            college_code
+        FROM
+            tbl_subject
+        WHERE
+            college_code IS NOT NULL
+        ORDER BY
+            subject_code
+    </select>
+    <insert id="registProfessor">
+        INSERT INTO
+            tb_professor (
+                professor_name,
+                professor_phone,
+                subject_code
+        )VALUES
+            (#{professorName},
+             #{professorPhone},
+             #{subjectCode})
+    </insert>
+</mapper>

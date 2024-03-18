@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+</head>
+<body>
+    <h3 style="font-size: 36px">신규 교수님 등록 🙋🏻‍</h3>
+    <form action="/professor/regist" method="post">
+        <div>
+            <label>교수님명 : </label>
+            <input type="text" name="professorName"/>
+        </div>
+        <div>
+            <label>교수님 전화번호 : </label>
+            <input type="text" name="professorPhone"/>
+        </div>
+        <div>
+            <label>학과 코드 : </label>
+            <input type="text" name="subjectCode"/>
+        </div>
+        <input type="submit"/>
+    </form>
+</body>
+<style>
+    input[type="submit"]{
+        background: cornflowerblue;
+        color: aliceblue;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</html>

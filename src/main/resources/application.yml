@@ -1,0 +1,23 @@
+# spring datasource config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/course_registration
+    hikari:
+      username: ohgiraffers
+      password: ohgiraffers
+
+# mybatis config
+mybatis:
+  mapper-locations: mappers/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+# logging config
+#logging:
+#  level:
+#    root: debug
+#  file:
+#    name: myapp.log
+#    path: /Users/yunii/Desktop/10_spring/02_spring_web/chap09-crud
+
